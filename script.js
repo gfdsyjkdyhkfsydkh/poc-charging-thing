@@ -8,3 +8,37 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+const slides = document.querySelectorAll('.slide');
+const options = {
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const currentSlide = entry.target;
+      const currentSlideId = currentSlide.getAttribute('id');
+      // Update the button color based on the current slide ID
+      updateButtonColor(currentSlideId);
+    }
+  });
+	console.log("hello")
+}, options);
+
+slides.forEach(slide => {
+  observer.observe(slide);
+});
+
+function updateButtonColor(currentSlideId) {
+  const buttons = document.querySelectorAll('.slide-button');
+  buttons.forEach(button => {
+    const buttonTarget = button.getAttribute('href').substring(1);
+    if (buttonTarget === currentSlideId) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+}
