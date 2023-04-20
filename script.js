@@ -9,35 +9,18 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-const slides = document.querySelectorAll('.slide');
-const options = {
-  rootMargin: '0px',
-  threshold: 0.5
-};
+document.querySelectorAll(".slider").forEach(slider => {
+	const items = slider.querySelectorAll(".slide");
 
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const currentSlide = entry.target;
-      const currentSlideId = currentSlide.getAttribute('id');
-      // Update the button color based on the current slide ID
-      updateButtonColor(currentSlideId);
-    }
-  });
-}, options);
+	const buttons = slider.querySelectorAll(".slide-button");
 
-slides.forEach(slide => {
-  observer.observe(slide);
+	buttons.forEach((button, i) => {
+		button.addEventListener("click", () => {
+			// unselect items
+			items.forEach(item => item.classList.remove("slide-selected"));
+			buttons.forEach(button => button.classList.remove("slide-button-selected"));
+
+			button.classList.add("slide-button-selected");
+		});
+	});
 });
-
-function updateButtonColor(currentSlideId) {
-  const buttons = document.querySelectorAll('.slide-button');
-  buttons.forEach(button => {
-    const buttonTarget = button.getAttribute('href').substring(1);
-    if (buttonTarget === currentSlideId) {
-      button.classList.add('active');
-    } else {
-      button.classList.remove('active');
-    }
-  });
-}
