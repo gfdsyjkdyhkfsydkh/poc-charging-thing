@@ -24,7 +24,6 @@ const observer = new IntersectionObserver((entries, observer) => {
       updateButtonColor(currentSlideId);
     }
   });
-	console.log("hello")
 }, options);
 
 slides.forEach(slide => {
