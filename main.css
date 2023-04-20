@@ -10,6 +10,7 @@ body {
 }
 /* NAVBAR */
 div.nav_wrapper > * {
+	margin-bottom: 50px !important;
 	width: 100%;
 }
 .navbar {
@@ -45,20 +46,17 @@ div.nav_wrapper > * {
 	width: auto;
   height: 20%;
 	display: inline-block;
-	object-fit:cover;
+	object-fit: cover;
 }
 /* MAIN */
 .root {
 	display: flex;
 	width: 100%;
 	height: 100vh;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
 	text-align: center;
 }
 
-#main-page {
+.main_page {
 	padding-top: 75px;
 	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
 }
