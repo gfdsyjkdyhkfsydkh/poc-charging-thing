@@ -24,3 +24,10 @@ document.querySelectorAll(".slider").forEach(slider => {
 		});
 	});
 });
+var input = document.querySelector('input'); // input element
+input.addEventListener('input', resizeInput); // add event listener
+resizeInput.call(input); 
+
+function resizeInput() {
+  this.style.width = this.value.length +  3 + "ch";
+}

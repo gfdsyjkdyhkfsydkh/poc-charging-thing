@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Single Redtech</title>
 	<link rel="stylesheet" href="main.css">
+	<script src="https://kit.fontawesome.com/3e6e26a48a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<main class="root">
@@ -86,10 +87,14 @@
 			<div id="lower">
 				<div id="calculator">
 					<div id="container">
-						<h2 class="calc-title">GRID&#x2122; Calculator</h2>
-						<p>Enter in your plugged in EV's</p>
-						<input type="number" id="charging-veh">
-						<p>Power output: </p>
+						<h2 class="calc-item" id="calc-title">GRID&#x2122; Calculator</h2>
+						<p class="calc-item" id="calc-text">Enter your number of plugged in EV's</p>
+						<div class="calc-input">
+							<button onclick="this.parentNode.querySelector('#charging-vehs').stepDown()"><i class="fa-solid fa-chevron-left fa-lg"></i></button>
+							<input type="number" inputmode="numeric" id="charging-vehs" class="calc-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
+							<button onclick="this.parentNode.querySelector('#charging-vehs').stepUp()"><i class="fa-solid fa-chevron-right fa-lg"></i></button>
+						</div>
+						<p class="calc-item" id="">Power output: </p>
 					</div>
 				</div>
 			</div>
