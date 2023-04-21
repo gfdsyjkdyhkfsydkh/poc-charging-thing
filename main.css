@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,500;0,600;0,700;0,900;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@100;300;400;500&family=Nunito+Sans:wght@300;400;600;700&family=Rubik:ital,wght@0,300;0,500;0,600;0,700;0,900;1,400&family=Kanit:wght@100;400;600;900&family=Oswald:wght@200;400;500;600&family=Archivo+Black&display=swap');
+@import url("https://use.typekit.net/ltq1foy.css");
+@import url("https://use.typekit.net/yhk8lqy.css");
 
 * {
 	margin: 0;
@@ -306,3 +303,16 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+#pwr-output-txt {
+	margin-top: 40px;
+	font-family: 'Archivo Black', sans-serif;	
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.9em;
+}
+
+#pwr-output {
+	margin-top: 10px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.9em;
+}

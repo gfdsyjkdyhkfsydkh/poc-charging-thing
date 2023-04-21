@@ -33,8 +33,14 @@ function resizeInput() {
 }
 
 $("#charging-vehs").on("keyup",function(event){
-	$("#charging-vehs").
+	var value = $("#charging-vehs").val();
+	$("#pwr-output").text(value)
+	console.log(value)
 });
+
 $("#calc-button-up, #calc-button-down").on("click", function(event){
-	console.log(this)
+	var value = $("#charging-vehs").val();
+	value = value * 150 + " kWh";
+	$("#pwr-output").text(value);
+	console.log(value);
 });

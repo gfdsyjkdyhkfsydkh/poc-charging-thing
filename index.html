@@ -92,11 +92,10 @@
 						<p class="calc-item" id="calc-text">Enter your number of plugged in EV's</p>
 						<div class="calc-input">
 							<button id="calc-button-down" onclick="this.parentNode.querySelector('#charging-vehs').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
-							<input type="number" inputmode="numeric" id="charging-vehs" class="calc-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
+							<input placeholder="0" type="number" inputmode="numeric" id="charging-vehs" class="calc-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
 							<button id="calc-button-up" onclick="this.parentNode.querySelector('#charging-vehs').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
 						</div>
-						<p class="calc-item" id="pwr-output-txt">Power output: </p>
-						<p class="calc-item" id="pwr-output"></p>
+						<p class="" id="pwr-output-txt">Power Output: <p id="pwr-output"></p></p>
 					</div>
 				</div>
 			</div>
