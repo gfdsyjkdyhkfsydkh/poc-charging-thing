@@ -31,3 +31,10 @@ resizeInput.call(input);
 function resizeInput() {
   this.style.width = this.value.length +  3 + "ch";
 }
+
+$("#charging-vehs").on("keyup",function(event){
+	$("#charging-vehs").
+});
+$("#calc-button-up, #calc-button-down").on("click", function(event){
+	console.log(this)
+});

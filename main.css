@@ -240,14 +240,14 @@ div.nav-wrapper > * {
 	
 	align-items: center;
 	justify-content: center;
-	height: 600px;
+	height: 700px;
 	width: 100%;
 
 	background-color: rgb(209,224,235);
 
 }
 .calc-item {
-	margin: 30px auto;
+	margin: 70px auto;
 	text-align: center;
 	height: 30px;
 }
@@ -270,22 +270,28 @@ div.nav-wrapper > * {
 #charging-vehs {
 	min-width: 1em;
 	font-family: 'Oswald', sans-serif;
-	height: 200%;
-	font-size: 1.5em;
+	height: 50px;
+	font-size: 2em;
 	margin: 0;
+	border: 0;
+	border-radius: 10%;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .calc-input {
 	display: inline-flex;
-
 }
 
 .calc-input > button {
-	background: rgb(12,60,96);
+	background: rgb(255, 255, 255);
 	border: 0;
-	width: 30px;
-}
+	width: 45px;
+	height: 50px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
 
+.calc-input > button:hover {
+	cursor: pointer;
+}
 .calc-input > button:nth-child(1) { border-radius: 10px 0 0 10px; margin-right: 10px;}
 .calc-input > button:nth-child(3) { border-radius: 0 10px 10px 0; margin-left: 10px;}
 
@@ -299,3 +305,4 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
 }
+
