@@ -64,7 +64,13 @@ div.nav-wrapper > * {
 }
 .top-page {
 	background-image: url("images/background.webp");
+	
+	/* parallax */
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 	background-size:cover;
+
 	height: 65%;
 	display: flex;
 	align-items: center;
@@ -153,13 +159,14 @@ div.nav-wrapper > * {
 .slides > div {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 900px;
+  width: 800px;
   height: 400px;
 	margin-right: 50px;
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
   position: relative;
+	overflow: visible;
   
 	display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -168,6 +175,7 @@ div.nav-wrapper > * {
   grid-template-areas: 
     "slide-img slide-name"
     "slide-img slide-text"; 
+	place-items: center;
   justify-content: center;
   align-items: center;
   font-size: 20px;
@@ -186,7 +194,7 @@ div.nav-wrapper > * {
 	cursor: pointer;
 }
 
-.slide-img { grid-area: slide-img; justify-self: center; align-self: center; }
+.slide-img { grid-area: slide-img; justify-self: center; align-self: center; object-fit:center; }
 .slide-name { grid-area: slide-name; justify-self: center; align-self: center; }
 .slide-text { grid-area: slide-text; justify-self: center; align-self: center; }
 
