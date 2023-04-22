@@ -241,7 +241,11 @@ div.nav-wrapper > * {
 	width: 100%;
 
 	background-color: rgb(209,224,235);
+	transition: background-color 0.4s;
 
+}
+.disabled-background {
+	background-color: rgb(255, 213, 228) !important;
 }
 .calc-item {
 	margin: 70px auto;
@@ -335,4 +339,56 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-top: 10px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 1.9em;
+}
+
+/* slider til/fra */
+.switch {
+	font-size: 17px;
+	position: relative;
+	display: inline-block;
+	width: 3.7em;
+	height: 1.8em; 
+}
+
+.switch input {
+	display: none;
+	opacity: 0;
+	width: 0;
+	height: 0;
+} 
+.slider-check {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #FF4377;
+	transition: .2s;
+	border-radius: 30px;
+} 
+.slider-check:before {
+	position: absolute;
+	content: "";
+	height: 1.4em;
+	width: 1.4em;
+	border-radius: 20px;
+	left: 0.2em;
+	bottom: 0.2em;
+	background-color: #FD9EB8;
+	transition: .4s;
+} 
+input:checked + .slider-check::before {
+	background-color:#84da89;
+} 
+input:checked + .slider-check {
+	background-color: #3a4b39;
+}
+ 
+input:focus + .slider-check {
+	box-shadow: 0 0 1px #3a4b39;
+}
+
+input:checked + .slider-check:before {
+	transform: translateX(1.9em);
 }

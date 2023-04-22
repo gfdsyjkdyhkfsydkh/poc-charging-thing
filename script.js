@@ -31,6 +31,14 @@ function whatis (value) {
     .toLowerCase();
 }
 
+$('.power').on('change', function() {
+	if(!$(this).is(":checked")){
+		$('#calculator').addClass("disabled-background")
+	} else {
+		$('#calculator').removeClass("disabled-background")
+	}
+})
+
 $(".calc-button").on("click", sizeOfEVInput)
 $(".grid-button").on("click", sizeOfGridInput)
 $("#charging-vehs").on("input",sizeOfEVInput);
@@ -43,6 +51,7 @@ function sizeOfGridInput() {
 function sizeOfEVInput() {
 	document.getElementById("charging-vehs").style.width = document.getElementById("charging-vehs").value.length +  3 + "ch";
 }
+
 $("#charging-vehs").on("keyup",function(event){
 	var value = $("#charging-vehs").val();
 	value = value * 150 + " kWh";
