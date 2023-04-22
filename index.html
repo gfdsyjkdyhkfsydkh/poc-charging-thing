@@ -89,20 +89,26 @@
 				<div id="calculator">
 					<div id="container">
 						<h2 class="calc-item" id="calc-title">GRID&#x2122; Calculator</h2>
-						<div id="calc-text-cont">
-							<p class="calc-item calc-text">Enter your number of plugged in EV's</p>
-							<p class="calc-item calc-text">And grid size</p>
-						</div>
-						<div class="calc-input">
+						<div class="calc-input-cont">
 							<!-- Charging vehicles input -->
-							<button id="calc-button-down" class="calc-button" onclick="this.parentNode.querySelector('#charging-vehs').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
-							<input placeholder="0" type="number" inputmode="numeric" id="charging-vehs" class="calc-item calc-input-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
-							<button id="calc-button-up" class="calc-button" onclick="this.parentNode.querySelector('#charging-vehs').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
-							
+							<div class="calc-text-cont">
+								<p class="calc-item calc-text">Enter your number of plugged in EV's:</p>
+							</div>
+							<div class="calc-input">
+								<button id="calc-button-down" class="calc-button" onclick="this.parentNode.querySelector('#charging-vehs').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
+								<input placeholder="0" type="number" inputmode="numeric" id="charging-vehs" class="calc-item calc-input-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
+								<button id="calc-button-up" class="calc-button" onclick="this.parentNode.querySelector('#charging-vehs').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+							</div>
+
+							<div class="calc-text-cont">
+								<p class="calc-item calc-text">And grid size:</p>
+							</div>
 							<!-- Grid input -->
-							<button class="grid-button" id="grid-button-down" onclick="this.parentNode.querySelector('#grid-size').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
-							<input placeholder="0" type="number" inputmode="numeric" id="grid-size" class="calc-item calc-input-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
-							<button class="grid-button" id="grid-button-up" onclick="this.parentNode.querySelector('#grid-size').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+							<div class="calc-input">
+								<button class="grid-button" id="grid-button-down" onclick="this.parentNode.querySelector('#grid-size').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
+								<input placeholder="0" type="number" inputmode="numeric" id="grid-size" class="calc-item calc-input-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'" >
+								<button class="grid-button" id="grid-button-up" onclick="this.parentNode.querySelector('#grid-size').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
+							</div>
 						</div>
 						<p class="calc-item" id="pwr-output-txt">Power Output: <p id="pwr-output"></p></p>
 					</div>

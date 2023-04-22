@@ -43,16 +43,6 @@ function sizeOfGridInput() {
 function sizeOfEVInput() {
 	document.getElementById("charging-vehs").style.width = document.getElementById("charging-vehs").value.length +  3 + "ch";
 }
-
-/* var inputs = document.querySelector('.calc-input-item');
-// $('.calc-input-item').on('input', resizeInput(this))
-inputs.addEventListener('input', resizeInput); // add event listener
-resizeInput.call(inputs);
-
-function resizeInput() {
-  this.style.width = this.value.length +  3 + "ch";
-} */
-
 $("#charging-vehs").on("keyup",function(event){
 	var value = $("#charging-vehs").val();
 	value = value * 150 + " kWh";
@@ -66,3 +56,4 @@ $("#calc-button-up, #calc-button-down").on("click", function(event){
 	$("#pwr-output").text(value);
 	console.log(value);
 });
+

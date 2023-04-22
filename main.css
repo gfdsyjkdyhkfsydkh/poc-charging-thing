@@ -268,6 +268,7 @@ div.nav-wrapper > * {
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	margin-top: 10px;
 }
 
 .calc-text {
@@ -305,9 +306,10 @@ div.nav-wrapper > * {
 .calc-input > button:hover {
 	cursor: pointer;
 }
+
 .calc-input > button:nth-child(1) { border-radius: 10px 0 0 10px; margin-right: 10px;}
-.calc-input > button:nth-child(3) { border-radius: 0 10px 10px 0; margin-left: 10px; margin-right: 10px;}
-.calc-input > button:nth-child(4) { border-radius: 10px 0 0 10px; margin-right: 10px; margin-left: 10px;}
+.calc-input > button:nth-child(3) { border-radius: 0 10px 10px 0; margin-left: 10px;}
+.calc-input > button:nth-child(4) { border-radius: 10px 0 0 10px; margin-right: 10px;}
 .calc-input > button:nth-child(6) { border-radius: 0 10px 10px 0; margin-left: 10px;}
 
 /* input number */
