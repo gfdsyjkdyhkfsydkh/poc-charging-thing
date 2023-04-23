@@ -58,7 +58,7 @@
 								<div id="slide-2" class="slide">
 									<img class="slide-img" src="./images/slides/mogens.png">
 									<h2 class="slide-name">Mogens</h2>
-									<p class="slide-text">"wow det er så vildt jeg creamer"</p>
+									<p class="slide-text">"wow det er vildt"</p>
 								</div>
 								<div id="slide-3" class="slide">
 									<img class="slide-img" src="./images/slides/steve.png">
@@ -106,13 +106,13 @@
 							<!-- Grid input -->
 							<div class="calc-input">
 								<button class="grid-button" id="grid-button-down" onclick="this.parentNode.querySelector('#grid-size').stepDown()"><i class="fa-solid fa-chevron-left fa-xl"></i></button>
-								<input placeholder="0" type="text" inputmode="number" id="grid-size" class="calc-item calc-input-item" min="0" onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'"><span class="calc-measurement">MW</span>
+								<input placeholder="0" type="number" id="grid-size" class="calc-item calc-input-item" min="0"><span class="calc-measurement">MW</span>
 								<button class="grid-button" id="grid-button-up" onclick="this.parentNode.querySelector('#grid-size').stepUp()"><i class="fa-solid fa-chevron-right fa-xl"></i></button>
 							</div>
 						</div>
-						<p class="calc-item" id="pwr-output-txt">Power Output: <p id="pwr-output"></p></p>
+						<p class="calc-item" id="pwr-output-txt">Power Output of vehicles: <p id="pwr-output"></p></p>
 						<label class="switch">
-							<input checked class="power" type="checkbox">
+							<input checked disabled class="power" type="checkbox">
 							<span class="slider-check"></span>
 						</label>
 					</div>

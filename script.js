@@ -54,13 +54,32 @@ function sizeOfEVInput() {
 
 $("#charging-vehs").on("input", writePowerOutput);
 
-$("#calc-button-up, #calc-button-down").on("click", writePowerOutput);
+$(".calc-button").on("click", writePowerOutput);
 
 function writePowerOutput() {
 	var value = $("#charging-vehs").val();
-	value = value * 150 / 1000 + " mWh";
+	value = value * 7.2 / 1000;
+	value = Number(value).toFixed(4);
+	value = value + " MW"
 	$("#pwr-output").text(value);
 	console.log(value);
 }
 
-$("")
+$(".calc-button").on("click", switchSwitch)
+$(".grid-button").on("click", switchSwitch)
+$("#charging-vehs").on("input", switchSwitch);
+$("#grid-size").on("input", switchSwitch);
+
+function switchSwitch() {
+	var gridSize = $("#grid-size").val();
+	var chargingVehs = $("#charging-vehs").val();
+	var powerOutput = chargingVehs * 7.2 / 1000;
+	if (powerOutput >= gridSize) {
+		$(".power").prop("checked", false);
+		$('#calculator').addClass("disabled-background")
+	} else {
+		$(".power").prop("checked", true);
+		$('#calculator').removeClass("disabled-background")
+	}
+	console.log(powerOutput)
+}
