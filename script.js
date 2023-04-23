@@ -53,6 +53,7 @@ function sizeOfEVInput() {
 }
 
 $("#charging-vehs").on("keyup",function(event){
+	$("#charging-vehs").val(new Intl.NumberFormat().format($("#charging-vehs").val()))
 	var value = $("#charging-vehs").val();
 	value = value * 150 + " kWh";
 	$("#pwr-output").text(value)
@@ -60,9 +61,9 @@ $("#charging-vehs").on("keyup",function(event){
 });
 
 $("#calc-button-up, #calc-button-down").on("click", function(event){
+	$("#charging-vehs").val(new Intl.NumberFormat().format($("#charging-vehs").val()))
 	var value = $("#charging-vehs").val();
 	value = value * 150 + " kWh";
 	$("#pwr-output").text(value);
 	console.log(value);
 });
-
