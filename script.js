@@ -52,18 +52,15 @@ function sizeOfEVInput() {
 	document.getElementById("charging-vehs").style.width = document.getElementById("charging-vehs").value.length +  3 + "ch";
 }
 
-$("#charging-vehs").on("keyup",function(event){
-	$("#charging-vehs").val(new Intl.NumberFormat().format($("#charging-vehs").val()))
-	var value = $("#charging-vehs").val();
-	value = value * 150 + " kWh";
-	$("#pwr-output").text(value)
-	console.log(value)
-});
+$("#charging-vehs").on("input", writePowerOutput);
 
-$("#calc-button-up, #calc-button-down").on("click", function(event){
-	$("#charging-vehs").val(new Intl.NumberFormat().format($("#charging-vehs").val()))
+$("#calc-button-up, #calc-button-down").on("click", writePowerOutput);
+
+function writePowerOutput() {
 	var value = $("#charging-vehs").val();
-	value = value * 150 + " kWh";
+	value = value * 150 / 1000 + " mWh";
 	$("#pwr-output").text(value);
 	console.log(value);
-});
+}
+
+$("")
