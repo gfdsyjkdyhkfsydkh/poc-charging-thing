@@ -9,6 +9,12 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+window.addEventListener("keydown", function(e) {
+	if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+			e.preventDefault();
+	}
+}, false);
+
 document.querySelectorAll(".slider").forEach(slider => {
 	const items = slider.querySelectorAll(".slide");
 
@@ -87,13 +93,48 @@ function switchSwitch() {
 $(document).on("keydown", function(e) {
 	moveSlide(e);
 });
+
+// jesus christ
 function moveSlide(e) {
+	const slideButton1 = document.getElementById("slide-button-1").classList.contains('slide-button-selected');
+	const slideButton2 = document.getElementById("slide-button-2").classList.contains('slide-button-selected');
+	const slideButton3 = document.getElementById("slide-button-3").classList.contains('slide-button-selected');
+	const slideButton4 = document.getElementById("slide-button-4").classList.contains('slide-button-selected');
+	const slideButton5 = document.getElementById("slide-button-5").classList.contains('slide-button-selected');
+
 	if (e.keyCode === 37) {
-		console.log(e + "hello")
+		if (slideButton1) {
+			scrollSlide(5);
+		} else if (slideButton2) {
+			scrollSlide(1);
+		} else if (slideButton3) {
+			scrollSlide(2);
+		} else if (slideButton4) {
+			scrollSlide(3);
+		} else if (slideButton5) {
+			scrollSlide(4);
+		}
 	} else if (e.keyCode === 39) {
-		console.log(e + "hewwo")
+		if (slideButton1) {
+			scrollSlide(2);
+		} else if (slideButton2) {
+			scrollSlide(3);
+		} else if (slideButton3) {
+			scrollSlide(4);
+		} else if (slideButton4) {
+			scrollSlide(5);
+		} else if (slideButton5) {
+			scrollSlide(1);
+		}
 	} else {
 		return false;
 	}
 
+}
+
+function scrollSlide(slideNumber) { 
+	console.log("hewwo");
+	document.getElementById("slide-" + slideNumber).scrollIntoView();
+	$(".slide-button").removeClass("slide-button-selected");
+	$(`#slide-button-${slideNumber}`).addClass("slide-button-selected");
 }
