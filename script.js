@@ -84,6 +84,13 @@ function switchSwitch() {
 	console.log(powerOutput)
 }
 
-document.body.addEventListener('keydown', function (e) {
-    alert('hello world');
-});​​​​​​​
+$(document).on("keydown", moveSlide(e));
+function moveSlide(e) {
+	if (e.keyCode != 37 || e.keyCode != 39) {
+		return;
+	} else if (e.keyCode = 37) {
+		var curSlide = $(".slides > a:target")
+		console.log(e)
+	}
+
+}
