@@ -91,7 +91,9 @@ function switchSwitch() {
 }
 
 $(document).on("keydown", function(e) {
-	moveSlide(e);
+	if (!$('input').is(':focus')) {
+		moveSlide(e);
+	} else { return }
 });
 
 // jesus christ
@@ -113,6 +115,8 @@ function moveSlide(e) {
 			scrollSlide(3);
 		} else if (slideButton5) {
 			scrollSlide(4);
+		} else {
+			scrollSlide(5)
 		}
 	} else if (e.keyCode === 39) {
 		if (slideButton1) {
@@ -125,11 +129,12 @@ function moveSlide(e) {
 			scrollSlide(5);
 		} else if (slideButton5) {
 			scrollSlide(1);
+		} else {
+			scrollSlide(2);
 		}
 	} else {
 		return false;
 	}
-
 }
 
 function scrollSlide(slideNumber) { 
