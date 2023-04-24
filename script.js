@@ -89,9 +89,9 @@ $(document).on("keydown", function(e) {
 });
 function moveSlide(e) {
 	if (e.keyCode === 37) {
-		
+		console.log(e + "hello")
 	} else if (e.keyCode === 39) {
-
+		console.log(e + "hewwo")
 	} else {
 		return false;
 	}
