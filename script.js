@@ -83,3 +83,7 @@ function switchSwitch() {
 	}
 	console.log(powerOutput)
 }
+
+document.body.addEventListener('keydown', function (e) {
+    alert('hello world');
+});​​​​​​​
