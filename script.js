@@ -84,7 +84,9 @@ function switchSwitch() {
 	console.log(powerOutput)
 }
 
-$(document).on("keydown", moveSlide(e));
+$(document).on("keydown", function(e) {
+	moveSlide(e);
+});
 function moveSlide(e) {
 	if (e.keyCode !== 37 || e.keyCode !== 39) {
 		return;
