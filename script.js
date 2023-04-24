@@ -88,11 +88,12 @@ $(document).on("keydown", function(e) {
 	moveSlide(e);
 });
 function moveSlide(e) {
-	if (e.keyCode !== 37 || e.keyCode !== 39) {
-		return;
-	} else if (e.keyCode === 37) {
-		var curSlide = $(".slides > a:target")
-		console.log(e)
+	if (e.keyCode === 37) {
+		
+	} else if (e.keyCode === 39) {
+
+	} else {
+		return false;
 	}
 
 }
